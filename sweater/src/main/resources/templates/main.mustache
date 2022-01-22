@@ -1,10 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<div>{{some}}</div>
-</body>
+	<div>
+		<form method="post">
+			<input type="text" name="text" placeholder="Введите сообщение"/>
+			<input type="text" name="tag" placeholder="Tag"/>
+			<button type="submit">Добавить</button>
+		</form>
+	</div>
+	<div>Список сообщений</div>
+	{{#messages}}
+	<div>
+		<b>{{id}}</b>
+		<snap>{{text}}</snap>
+		<i>{{tag}}</i>
+	</div>
+	{{/messages}}
 </html>
