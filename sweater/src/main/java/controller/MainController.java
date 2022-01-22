@@ -1,4 +1,4 @@
-package com.example.demo;
+package controller;
 
 import java.util.Map;
 
@@ -12,7 +12,7 @@ import com.example.demo.domain.Message;
 import com.example.demo.repositories.MessageRepo;
 
 @Controller
-public class GreetingController {
+public class MainController {
 	@Autowired
 	private MessageRepo messageRepo;
 	
