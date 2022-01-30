@@ -1,9 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
 <body>
 	<div>
 		<form action="/logout" method="post">
@@ -11,23 +7,23 @@
         </form>
 	</div>
 	<div>
-		<form method="post" action="creator">
-			<input type="text" name="text" placeholder="Введите сообщение"/>
+		<form method="post">
+			<input type="text" name="text" placeholder="������� ���������"/>
 			<input type="text" name="tag" placeholder="Tag"/>
 			<input type="hidden" name="_csrf" value="{{_csrf.token}}">
-			<button type="submit">Добавить</button>
+			<button type="submit">Add</button>
 		</form>
 	</div>
-	<div>Список сообщений</div>
+	<div>List messages</div>
 	<form method="post" action="filter">
 		<input type="text" name="filter" />
 		<input type="hidden" name="_csrf" value="{{_csrf.token}}">
-		<button type="submit">Найти</button>
+		<button type="submit">Find</button>
 	</form>
 	{{#messages}}
 	<div>
 		<b>{{id}}</b>
-		<snap>{{text}}</snap>
+		<span>{{text}}</span>
 		<i>{{tag}}</i>
 	</div>
 	{{/messages}}
