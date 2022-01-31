@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.demo.domain.Role;
 import com.example.demo.domain.User;
 import com.example.demo.repositories.UserRepo;
 
@@ -31,7 +32,7 @@ public class RegistrationController {
 		}
 		
 		user.setActive(true);
-		user.setRoles(Collections.singleton(null));
+		user.setRoles(Collections.singleton(Role.USER));
 		userRepo.save(user);
 		
 		return "redirect:/login";
